@@ -10,7 +10,7 @@
     hv: #9274ca; 
     primary: #C5C8C6; 
     ug: #0B2447;
-    font: "Monospace 11";
+    font: "Iosevka Nerd Font 11";
     background-color: @bg;
     //dark: @bg;
     border: 0px;
@@ -22,7 +22,7 @@
 
 // defines different aspects of the window
 window {
-    width: 700;
+    width: 600;
     /*since line wont work with height, i comment it out 
     if you rather control the size via height
     just comment it out */
@@ -34,7 +34,7 @@ window {
     transparency: "screenshot";
     border-color: @primary;   
     border: 3px;
-    border-radius: 6px;
+    border-radius: 5px;
     spacing: 0;
     children: [ mainbox ];
 }
@@ -46,7 +46,7 @@ mainbox {
 
 inputbar {
     color: @kl;
-    padding: 11px;
+    padding: 10x;
     border: 0 0 2px 0;
     border-color: @primary;
 }
