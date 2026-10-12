@@ -13,7 +13,7 @@
   },
   "modules": [
     "title",
-    "separator",
+    "break",
     "os",
     "kernel",
     "separator",
@@ -22,10 +22,10 @@
     "de",
     "wm",
     "theme",
-    "separator",
+    "break",
     "terminal",
     "memory",
-    "separator",
+    "break",
     "colors"
   ]
 }
