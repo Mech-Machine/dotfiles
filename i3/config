@@ -136,7 +136,7 @@ bar {
 }
 gaps inner 4 
 gaps outer 2
-
+exec_always ~/.config/polybar/launch.sh &
 # ~/.config/i3/config
 # class                 border  backgr. text    indicator child_border
 client.focused          #7aa2f7 #1a1b26 #c0caf5 #7dcfff   #7aa2f7
