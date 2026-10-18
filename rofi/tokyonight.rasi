@@ -1,16 +1,9 @@
-/*
- * Tokyonight colorscheme for rofi
- * User: w8ste
- */
-
-
-// define colors etc.
 * {
     bg: #24283b;
-    hv: #9274ca; 
-    primary: #C5C8C6; 
+    hv: #bb9af7; 
+    primary: #73daca; 
     ug: #0B2447;
-    font: "Iosevka Nerd Font 14";
+    font: "Iosevka Nerd Font 16";
     background-color: @bg;
     //dark: @bg;
     border: 0px;
@@ -23,36 +16,31 @@
 // defines different aspects of the window
 window {
     width: 600;
-    /*since line wont work with height, i comment it out 
-    if you rather control the size via height
-    just comment it out */
-    //height: 500;
-
     orientation: horizontal;
     location: center;
     anchor: center;
     transparency: "screenshot";
     border-color: @primary;   
     border: 3px;
-    border-radius: 5px;
-    spacing: 0;
+    border-radius: 6px;
+    spacing: 2;
     children: [ mainbox ];
 }
 
 mainbox {
-    spacing: 0;
+    spacing: 4;
     children: [ inputbar, message, listview ];
 }
 
 inputbar {
     color: @kl;
-    padding: 10x;
+    padding: 11px;
     border: 0 0 2px 0;
     border-color: @primary;
 }
 
 message {
-    padding: 0;
+    padding: 2;
 }
 
 textbox {
@@ -77,13 +65,13 @@ listview {
     layout: vertical;
     //spacing: 5px;
     padding: 8px;
-    lines: 12;
+    lines: 6;
     columns: 2;
     dynamic: false;
 }
 
 element {
-    padding: 4px;
+    padding: 2px;
     vertical-align: 1;
     color: @kl;
     font: inherit;
@@ -92,6 +80,7 @@ element {
 element-text {
     background-color: inherit;
     text-color: inherit;
+    padding: 2px;
 }
 
 element selected.normal {
@@ -107,6 +96,7 @@ element normal active {
 element-text, element-icon {
     background-color: inherit;
     text-color: inherit;
+    size: 28;
 }
 
 element normal urgent {
@@ -121,7 +111,7 @@ element selected active {
 button {
     padding: 6px;
     color: @primary;
-    horizonatal-align: 0.5;
+    horizonatal-align: 1;
 
     border: 2px 0px 2px 2px;
     border-radius: 4px 0px 0px 4px;
@@ -135,4 +125,4 @@ button selected normal {
 
 scrollbar {
     enabled: true;
-} 
+}  
