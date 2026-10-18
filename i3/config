@@ -1,10 +1,9 @@
 set $mod Mod4
-font pango:Iosevka Nerd Font Propo 14
+font pango:Iosevka Nerd Font 12
 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-set $refresh_i3status killall -SIGUSR1 i3status
 exec_always feh --bg-fill ~/.walls/wall.jpg
 exec_always --no-startup-id autotiling
 
@@ -14,7 +13,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 floating_modifier $mod
-exec_always picom
+floating_minimum_size 75 x 50
+floating_maximum_size -1 x -1
+exec --no-startup-id picom --config ~/.config/picom/picom.conf 
 
 tiling_drag modifier titlebar
 
@@ -47,12 +48,10 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split stacking tabbed
 
 # toggle tiling / floating
-bindsym $mod+Shift+w floating toggle
+bindsym $mod+w floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -126,20 +125,18 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
-bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
+default_border pixel 0
+bindsym $mod+s mode "resize"
+bindsym $mod+y border pixel 2
 gaps inner 4 
 gaps outer 2
-exec_always ~/.config/polybar/launch.sh &
+
 # ~/.config/i3/config
 # class                 border  backgr. text    indicator child_border
 client.focused          #7aa2f7 #1a1b26 #c0caf5 #7dcfff   #7aa2f7
 client.focused_inactive #3b4261 #1a1b26 #565f89 #3b4261   #3b4261
 client.unfocused        #3b4261 #1a1b26 #565f89 #3b4261   #3b4261
 client.urgent           #f7768e #1a1b26 #c0caf5 #f7768e   #f7768e
+
+exec_always ~/.config/polybar/launch.sh & 
+
