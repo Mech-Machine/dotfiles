@@ -127,7 +127,6 @@ mode "resize" {
 }
 default_border pixel 2
 bindsym $mod+s mode resize
-#bindsym $mod+y border pixel 2
 gaps inner 2 
 gaps outer 2
 
