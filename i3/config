@@ -125,7 +125,7 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-default_border pixel 2q
+default_border pixel 2
 bindsym $mod+s mode resize
 gaps inner 2 
 gaps outer 2
