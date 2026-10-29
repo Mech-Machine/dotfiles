@@ -15,7 +15,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 floating_minimum_size 75 x 50
 floating_maximum_size -1 x -1
-exec --no-startup-id picom --config ~/.config/picom/picom.conf 
+exec_always picom --config ~/.config/picom/picom.conf 
 
 tiling_drag modifier titlebar
 
@@ -125,7 +125,7 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-default_border pixel 2
+default_border pixel 2q
 bindsym $mod+s mode resize
 gaps inner 2 
 gaps outer 2
