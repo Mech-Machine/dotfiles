@@ -1,7 +1,8 @@
 Requirements:
+
  picom compositor;
 
- feh (for the wallpaper,name it wall.jpg);
+ feh (for the wallpaper,and name it wall.jpg);
 
  polybar;
 
